@@ -1,0 +1,233 @@
+@font-face {
+    font-family: texto;
+    src: url(../fontes/Excalibur\ Nouveau.ttf);
+}
+
+@font-face {
+    font-family: titulo;
+    src: url(../fontes/Rothwell.otf);
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+body {
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://img.freepik.com/free-vector/watercolour-smoke-background_91008-442.jpg?t=st=1733141103~exp=1733144703~hmac=8af6e921d47f5d1b16a589820c81b4a95d182f19b0ce061c1f3b920eec1ec17e&w=1380);
+    background-size: cover;
+    display: flex;
+    place-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#videoFundo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+#videoFundo video {
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -35vw;
+    top: -20vw;
+}
+
+#fundoCadastro {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.315);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    border-top: black 5px solid;
+    border-bottom: black 5px solid;
+}
+
+
+section {
+    width: 60%;
+    background-image: linear-gradient(to bottom, rgb(89, 0, 255),rgb(0, 0, 0),rgb(46, 46, 46));
+    height: 100%;
+    justify-self: left;
+    display: flex;
+    flex-direction: column;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    font-family: texto;
+}
+
+#secaoLogin {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black,rgb(0, 0, 0),rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#secaoLogin p {
+    justify-self: center;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+#secaoLoginInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#paginaCadastrar {
+    width: 110px;
+    position: absolute;
+    top: 10px;
+    margin-left: 20px;
+}
+
+#cadastroUsuario {
+    background-color: aliceblue;
+    justify-content: space-around;
+    color: aliceblue;
+    height: 90%;
+    width: 65%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px black;
+}
+
+#inicioCadastro {
+    width: auto;
+    margin: 0px;
+    color: black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3vw;
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(to right, rgb(29, 29, 29),rgba(184, 0, 184, 0.775), rgba(0, 0, 0, 0));
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    padding-left: 30px;
+    padding: 10px;
+}
+
+#inicioCadastro p {
+    margin: 0px;
+    color: rgb(204, 204, 204);
+    font-family: titulo;
+    font-size: 70px;
+    text-align: -webkit-center;
+}
+
+#inicioCadastro img {
+    width: 7.8vw;
+    height: 7.8vw;
+    margin-left: 50px;
+}
+
+.iconeCadastro {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    margin-top: 36px;
+    margin-left: 5px;
+}
+
+.iconeCadastrar {
+    width: 50px;
+    height: 50px;
+}
+
+#inputsCadastros {
+    width: 100%;
+}
+
+.inputCadastro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputCadastro span{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 60px;
+    display: none;
+}
+
+.inputCadastro label {
+    color: rgb(244, 90, 255);
+    box-shadow: 2px 2px 2px gray;
+    font-family: texto;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 180px;
+    border-bottom-right-radius: 20px;
+}
+
+.inputCadastro input {
+    background-image: linear-gradient(to right, rgb(204, 204, 204), rgb(221, 110, 208),rgb(255, 41, 251));
+    border-radius: 10px;
+    border: none;
+    border-bottom: 4px solid rgb(46, 46, 46);
+    height: 50px;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgb(230, 29, 220);
+    padding-left: 50px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#button {
+    width: 60%;
+    height: 60px;
+    font-family: titulo;
+    display: flex;
+    justify-self: center;
+    font-size: 25px;
+    border-radius: 100px;
+    margin-inline: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 10px 20px rgb(82, 82, 82);
+}
+
+#button:hover {
+    background-color: rgb(69, 69, 69);
+    font-size: 30px;
+    box-shadow: 2px 2px 20px rgb(255, 0, 230);
+    color: white;
+}
+
+.preencherCampo {
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    color: red;
+    text-decoration: underline;
+    display: block;
+}
+

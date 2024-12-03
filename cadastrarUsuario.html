@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/index.css" rel="stylesheet"> 
+    <link href="./css/cadastrarUsuario.css" rel="stylesheet"> 
     <title>MoChatOn</title>
-    <link rel="shortcut icon" href="./imagens/lojaIcone.jpg" type="image/png">
+    <link rel="shortcut icon" href="./imagens/MoChatOnSomenteIcone.png" type="image/png">
 
 </head>
     <body>
         <section>
             <div id="secaoLogin">
-                <div>
-                    <p>MoChatOn</p>
-                </div>
-                <div id="secaoLoginInputs">
-                    <div class="divInputLogin">
-                        <label>Username:</label>
-                        <input type="text" name="" id="nomeLogin" placeholder="Username">
-                    </div>
-                    <div class="divInputLogin">
-                        <label>Password:</label>
-                        <input type="password" name="" id="senhaLogin" placeholder="Password">
-                    </div>
-                </div>
-                <button id="botaoLogar">Entrar</button>
-                <div>
-                    <p>Não é cadastrado no nosso site ainda?</p>
-
-                    <div>
-                        <a href="cadastrarUsuario.html"><p>Cadastrar-se</p></a>
-                    </div>
-                </div>
-                
+                <img src="./imagens/iconePerfilLuaBranco.png" id="paginaCadastrar" alt="">
+                    <section id="cadastroUsuario">
+                                
+                            <div id="inicioCadastro">
+                                <a href="index.html"><img src="./imagens/MoChatOnGrandeSemFundo.png" class="iconeCadastrar"></a>
+                                <p>Cadastrar</p>
+                            </div>
+        
+                                <hr>
+                            <div id="inputsCadastros">
+                                <div class="inputCadastro">
+                                    <label for="nomeComprador">Nome do comprador</label>
+                                    <img src="./imagens/iconUsuarioPreto.png" class="iconeCadastro">
+                                    <input type="text" id="nomeComprador" placeholder="Username">
+                                    <span class="preencherCampo" id="preencherCampoCadastroNome">Todos os campos devem ser preenchidos.</span>
+                                </div>       
+        
+                                <div class="inputCadastro">
+                                    <label for="emailComprador">E-mail</label>
+                                    <img src="./imagens/email.png" class="iconeCadastro">
+                                    <input type="email" id="emailComprador" placeholder="Email">
+                                    <span class="preencherCampo" id="preencherCampoCadastroEmail">Todos os campos devem ser preenchidos.</span>
+                                </div> 
+        
+                                <div class="inputCadastro">
+                                    <label for="senhaComprador">Senha</label>
+                                    <img src="./imagens/cadeado.png" class="iconeCadastro">
+                                    <input type="password" id="senhaComprador" placeholder="Password">
+                                    <span class="preencherCampo" id="preencherCampoCadastroSenha">Todos os campos devem ser preenchidos.</span>
+                                </div> 
+                            </div>
+                                    <input id="button" type="button" value="Cadastrar" onclick="cadastrarComprador()">
+        
+                    </section>
             </div>
         </section>
-        <div id="divVideo">
+        <div id="videoFundo">
             <video width="320" height="240" muted autoplay loop>
-                <source src="videos/136971-765445566.mp4" type="video/mp4">
+                <source src="./videos/fundoCadastrarUsuario.mp4" type="video/mp4">
             </video>
         </div>
     </body>
