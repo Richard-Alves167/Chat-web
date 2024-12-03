@@ -1,0 +1,109 @@
+@font-face {
+    font-family: texto;
+    src: url(../fontes/Excalibur\ Nouveau.ttf);
+}
+
+@font-face {
+    font-family: titulo;
+    src: url(../fontes/Rothwell.otf);
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+body {
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://img.freepik.com/free-vector/watercolour-smoke-background_91008-442.jpg?t=st=1733141103~exp=1733144703~hmac=8af6e921d47f5d1b16a589820c81b4a95d182f19b0ce061c1f3b920eec1ec17e&w=1380);
+    background-size: cover;
+    display: flex;
+    place-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#videoFundo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+#videoFundo video {
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -35vw;
+    top: -20vw;
+}
+
+section {
+    width: 95%;
+    background-image: linear-gradient(to bottom, rgb(89, 0, 255),rgb(0, 0, 0),rgb(46, 46, 46));
+    height: 100%;
+    justify-self: left;
+    display: flex;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    font-family: texto;
+}
+
+#lateralConversas {
+    height: 100%;
+    width: 25%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+#perfilConversa {
+    width: 100%;
+    height: 180px;
+    background-image: linear-gradient(to right, rgb(255, 0, 221),rgb(255, 255, 255),rgb(46, 46, 46));
+}
+
+.conversa {
+    border-top: 2px solid purple;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.conversa:hover {
+    border: white;
+    color: aliceblue;
+    background-color: rgb(167, 11, 167);
+}
+
+.conversa img {
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+    border-radius: 100px;
+    border: 2px solid purple;
+}
+
+.conversa:hover img {
+ border: 2px solid aliceblue;;
+}
+
+.conversa p {
+    font-size: 30px;
+}
+
+#chatConversa {
+    height: 100%;
+    width: 75%;
+}
