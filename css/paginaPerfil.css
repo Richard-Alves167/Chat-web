@@ -1,0 +1,480 @@
+@font-face {
+    font-family: texto;
+    src: url(../fontes/Excalibur\ Nouveau.ttf);
+}
+
+@font-face {
+    font-family: titulo;
+    src: url(../fontes/Rothwell.otf);
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+body {
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://img.freepik.com/free-vector/watercolour-smoke-background_91008-442.jpg?t=st=1733141103~exp=1733144703~hmac=8af6e921d47f5d1b16a589820c81b4a95d182f19b0ce061c1f3b920eec1ec17e&w=1380);
+    background-size: cover;
+    display: flex;
+    place-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#videoFundo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+#videoFundo video {
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -35vw;
+    top: -20vw;
+}
+
+#fundoCadastro {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.315);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    border-top: black 5px solid;
+    border-bottom: black 5px solid;
+}
+
+
+section {
+    width: 60%;
+    background-image: linear-gradient(to bottom, rgb(89, 0, 255),rgb(0, 0, 0),rgb(46, 46, 46));
+    height: 100%;
+    justify-self: left;
+    display: flex;
+    flex-direction: column;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    font-family: texto;
+}
+
+#secaoLogin {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black,rgb(0, 0, 0),rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#secaoLoginInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#paginaCadastrar {
+    width: 110px;
+    position: absolute;
+    top: 10px;
+    margin-left: 20px;
+}
+
+#cadastroUsuario {
+    background-color: aliceblue;
+    justify-content: space-around;
+    color: aliceblue;
+    height: 90%;
+    width: 65%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px black;
+}
+
+#inicioCadastro {
+    width: auto;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+    color: black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.9vw;
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(to right, rgb(29, 29, 29),rgba(184, 0, 184, 0.775), rgba(0, 0, 0, 0));
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    padding-left: 30px;
+    padding: 10px;
+}
+
+
+hr {
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#button {
+    width: 60%;
+    height: 60px;
+    font-family: titulo;
+    display: flex;
+    justify-self: center;
+    font-size: 25px;
+    border-radius: 100px;
+    margin-inline: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 10px 20px rgb(82, 82, 82);
+}
+
+#button:hover {
+    background-color: rgb(69, 69, 69);
+    font-size: 30px;
+    box-shadow: 2px 2px 20px rgb(255, 0, 230);
+    color: white;
+}
+
+.preencherCampo {
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    color: red;
+    text-decoration: underline;
+    display: block;
+}
+
+#TelaUsuario {
+    width: 40%;
+    height: 14vw;
+    margin: 0px;
+    margin-top: 24px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+#topoUsuario {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sairConta {
+    position: absolute;
+    display: flex;
+    font-size: 14px;
+    text-decoration:underline;
+    color: red;
+    cursor: pointer;
+    margin-top: 7vw;
+    right: 6vw;
+}
+
+#topoUsuario h3 {
+    text-align: -webkit-center;
+}
+
+#imagemUsuario {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#cameraIcone {
+    display: none;
+    position: absolute;
+    margin-top: -7vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
+    width: 6vw;
+}
+
+#icone {
+    border-radius: 1000px;
+    width: 7vw;
+    height: 7vw;
+    border: 5px black solid;
+    margin-left: 1vw;
+    align-content: center;
+    text-align-last: center;
+    
+}
+
+#icone:hover {
+    background-color:rgba(48, 48, 48, 0.445);
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+    text-align-last: center;
+}
+
+#icone:hover #cameraIcone {
+    display: flex;
+}
+
+#trianguloIcone {
+        width: 0; 
+        height: 0; 
+        z-index: 3;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid #484848;
+        position: absolute;
+        margin-left: 15px;
+        margin-top: -40px;
+}
+
+#divMudarIcone {
+    width: 300px;
+    height: 30px;
+    z-index: 3;
+    font-size: 20px;
+    background-color: #484848;
+    border-radius: 10px;
+    position: relative;
+    margin-left: -0.75vw;
+    padding: 5px;
+    display: none;
+    margin-top: 2.5vw;
+}
+
+#divMudarIcone button {
+    width: 50px;
+    height: 30px;
+    margin: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#divMudarIcone input {
+    width: 80%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align-last: left;
+    padding-left: 10px;
+}
+
+#icone:hover #divMudarIcone{
+    display: flex;
+}
+
+#nomeUsuario {
+    margin-left: 10px;
+    margin: 0px;
+    color: rgb(204, 204, 204);
+    font-family: titulo;
+    font-size: 30px;
+    text-align: -webkit-center;
+}
+
+#nomeUsuarioColocado {
+    font-size: 3.5vw;
+    margin-left: 20px;
+}
+
+#usuarioInformacoesEChat {
+    width: 100%;
+    display: flex;
+}
+
+#informacoesUsuario {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#informacoesUsuario div {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    height: 30px;
+}
+
+#informacoesUsuario div p {
+    margin: 0px;
+}
+
+#informacoesUsuario div p {
+    width: 70px;
+}
+
+#informacoesUsuario hr {
+    border: 1px solid gray;
+}
+
+#removerConta {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+    place-items: center;
+    justify-content: center;
+    display: flex;
+    border: 2px black solid;
+    border-radius: 50px;
+    margin-top: 1vw;
+}
+
+#removerConta:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.iconeCadastrar {
+    width: 6.5vw;
+    position: absolute;
+    margin-top: 2.2vw;
+    margin-left: -3.5vw;
+}
+
+#irParaChat {
+    width: 280px;
+    height: 20vw;
+    margin-top: 24px;
+    margin-left: 20px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+#miniChatPerfilInicio {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#miniChatPerfilIcone {
+    width: 50px;
+    position: absolute;
+    margin-left: -11vw;
+}
+
+#miniChatPerfilInicio p {
+    color: black;
+    margin: 0px;
+    font-size: 1.5vw;
+}
+
+#miniChatPerfil {
+    height: 70%;
+    width: 94%;
+    background-color: #484848;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#irParaChat button {
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+    margin-top: 0.5vw;
+}
+
+#irParaChat button:hover {
+    background-color: rgb(69, 69, 69);
+    font-size: 12px;
+    box-shadow: 2px 2px 20px rgb(255, 0, 230);
+    color: white;
+}
+
+#listaDeMensagens {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.mensagem {
+    background-color: antiquewhite;
+    border-radius: 20px;
+    list-style: none;
+    width: auto;
+    max-width: 80%;
+    padding: 6px;
+    margin-left: 26%;
+    margin-right: 10px;
+}
+
+.textoMensagem {
+    font-size: 1vw;
+    color: black;
+    margin: 0px;
+}
+
+.iconeMensagem {
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 6.7vw;
+    position: fixed;
+}
+
+.dataMensagem {
+    font-size: 13px;
+    margin-top: 10px;
+    position: fixed;
+}
+
+.mensagemOutroUsuario {
+    background-color: antiquewhite;
+    border-radius: 20px;
+    list-style: none;
+    width: auto;
+    max-width: 80%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.textoMensagemOutroUsuario {
+    font-size: 16px;
+    color: black;
+    margin: 0px;
+}
+
+.iconeMensagemOutroUsuario {
+    width: 30px;
+    position: fixed;
+    margin-top: 7px;
+    margin-left: -28px;
+}
+
+.dataMensagemOutroUsuario {
+    position: fixed;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 6vw;
+}

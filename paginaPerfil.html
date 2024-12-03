@@ -3,41 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/index.css" rel="stylesheet"> 
+    <link href="./css/paginaPerfil.css" rel="stylesheet"> 
     <title>MoChatOn</title>
-    <link rel="shortcut icon" href="./imagens/lojaIcone.jpg" type="image/png">
+    <link rel="shortcut icon" href="./imagens/MoChatOnSomenteIcone.png" type="image/png">
 
 </head>
     <body>
         <section>
             <div id="secaoLogin">
-                <div>
-                    <p>MoChatOn</p>
-                </div>
-                <div id="secaoLoginInputs">
-                    <div class="divInputLogin">
-                        <label>Username:</label>
-                        <input type="text" name="" id="nomeLogin" placeholder="Username">
-                    </div>
-                    <div class="divInputLogin">
-                        <label>Password:</label>
-                        <input type="password" name="" id="senhaLogin" placeholder="Password">
-                    </div>
-                </div>
-                <button id="botaoLogar">Entrar</button>
-                <div>
-                    <p>Não é cadastrado no nosso site ainda?</p>
-
-                    <div>
-                        <p>Cadastrar-se</p>
-                    </div>
-                </div>
-                
+                <img src="./imagens/iconePerfilLuaBranco.png" id="paginaCadastrar" alt="">
+                    <section id="cadastroUsuario">
+                                
+                            <div id="inicioCadastro">
+                                <div id="icone" onclick="mudarIcone()">
+                                    <img src="imagens/iconUser.png" id="imagemUsuario">
+                                    <img src="imagens/camera.png" id="cameraIcone">
+                                    <div id="divMudarIcone">
+                                        <div id="trianguloIcone"></div>
+                                        <input type="text" id="iconeEscolhidoUsuario" placeholder="http:"><button>+</button>
+                                    </div>
+                                </div>
+                                <p id="nomeUsuario">Olá <span id="nomeUsuarioColocado">Richard Alves...</span></p>
+                                <span id="sairConta" onclick="sairConta()">Sair Da Conta</span>
+                            </div>
+        
+                                <hr>
+                                <div id="usuarioInformacoesEChat">
+                                    <section id="TelaUsuario">
+                                        <div id="informacoesUsuario">
+                                            <hr>
+                                            <div>
+                                                <p>Nome:</p>
+                                                <span id="nomeUsario">Richard de Jesus Cabral Alves</span>
+                                            </div>
+                                            <hr>
+                                            <div>
+                                                <p>Email:</p>
+                                                <span id="emailUsario">RichardAlves@gmail.com</span>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                
+                                        <button id="removerConta" onclick="removerConta()">
+                                            <p>Remover Conta</p>
+                                        </button>
+                                        <a href="index.html"><img src="./imagens/MoChatOnGrandeSemFundo.png" class="iconeCadastrar"></a>
+                                    </section>
+                                    <div id="irParaChat">
+                                        <div id="miniChatPerfilInicio">
+                                            <img src="./imagens/MoChatOnGrandeSemFundo.png" id="miniChatPerfilIcone"><p>Chat Virtual</p>
+                                        </div>
+                                        <!-- <hr> -->
+                                        <div id="miniChatPerfil">
+                                            <ul id="listaDeMensagens">
+                                                <li class="mensagem">
+                                                    <p class="textoMensagem">Olá, Seja bem vindo ao nosso site ^_^</p>
+                                                    <img src="./imagens/iconUsuarioPreto.png" class="iconeMensagem" alt="">
+                                                    <span class="dataMensagem">02/12/24</span>
+                                                </li>
+                                                <li class="mensagemOutroUsuario">
+                                                    <p class="textoMensagem">Olá</p>
+                                                    <img src="./imagens/iconUsuarioPreto.png" class="iconeMensagemOutroUsuario" alt="">
+                                                    <span class="dataMensagemOutroUsuario">02/12/24</span>
+                                                </li>
+                                                <li class="mensagem">
+                                                    <p class="textoMensagem">Bem vindo</p>
+                                                    <img src="./imagens/iconUsuarioPreto.png" class="iconeMensagem" alt="">
+                                                    <span class="dataMensagem">02/12/24</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <hr> -->
+                                        <div>
+                                            <a href="chat.html"><button>Ir para Conversa</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
             </div>
         </section>
-        <div id="divVideo">
+        <div id="videoFundo">
             <video width="320" height="240" muted autoplay loop>
-                <source src="videos/136971-765445566.mp4" type="video/mp4">
+                <source src="./videos/fundoCadastrarUsuario.mp4" type="video/mp4">
             </video>
         </div>
     </body>
