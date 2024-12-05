@@ -43,7 +43,7 @@ body {
 }
 
 section {
-    width: 95%;
+    width: 90%;
     background-image: linear-gradient(to bottom, rgb(89, 0, 255),rgb(0, 0, 0),rgb(46, 46, 46));
     height: 100%;
     justify-self: left;
@@ -66,25 +66,50 @@ section {
     overflow: auto;
 }
 
-#perfilConversa {
-    width: 100%;
-    height: 180px;
-    background-image: linear-gradient(to right, rgb(255, 0, 221),rgb(255, 255, 255),rgb(46, 46, 46));
+#listaConversas {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.conversa {
-    border-top: 2px solid purple;
+#perfilConversa {
     width: 100%;
-    height: 100px;
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(255, 0, 221),rgb(255, 255, 255),rgb(99, 99, 99));
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
+#perfilConversa p {
+    padding-right: 20px;
+}
+
+
+#perfilConversa img{
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+    border-radius: 100px;
+    border: 2px solid purple;
+}
+
+.conversa {
+    border-top: 2px solid purple;
+    background-image: linear-gradient(to right,rgb(196, 196, 196),rgb(96, 65, 100));
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
 .conversa:hover {
     border: white;
     color: aliceblue;
-    background-color: rgb(167, 11, 167);
+    background-image: linear-gradient(to right, rgb(77, 0, 87), rgb(196, 196, 196));
 }
 
 .conversa img {
@@ -106,4 +131,195 @@ section {
 #chatConversa {
     height: 100%;
     width: 75%;
+}
+
+#topoConversa {
+    height: 20%;
+    width: 100%;
+    background-image: linear-gradient(to right, gray,purple,black);
+    /* border-bottom: 7px purple solid; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#topoConversa div {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    align-items: center;
+}
+
+#topoConversa div img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: none;
+}
+
+#topoConversa img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 10px;
+}
+
+#topoConversa p {
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+#novaConversa {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-color: rgb(162, 0, 255);
+    border: #f4f4f4 2px solid;
+    width: fit-content;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#listaMensagens {
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to bottom, gray, black, rgb(69, 0, 69));
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    overflow-x: auto;
+}
+
+.mensagem {
+    display: flex;
+    list-style: none;
+    max-width: 80%;
+    height: fit-content;
+    margin-right: 10px;
+    margin-left: 4vw;
+}
+
+.textoMensagem {
+    background-color: #f4f4f4;
+    box-shadow: 2px 5px 10px rgb(219, 0, 219);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.5vw;
+    width: fit-content;
+    color: black;
+    margin: 0px;
+}
+
+.iconeMensagem {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: white;
+    border-radius: 100px;
+    margin-top: 5px;
+    margin-left: -3.5vw;
+    margin-bottom: -2vw;
+    position: relative;
+}
+
+.nomeMensagem {
+    margin: 0px;
+    margin-top: -1.2vw;
+    margin-left: -4vw;
+    font-size: 1vw;
+    color: blueviolet;
+}
+
+.dataMensagem {
+    font-size: 1vw;
+    margin-left: 1vw;
+    display: flex;
+    justify-self: end;
+    align-self: self-end;
+    margin-bottom: -1.5vw;
+    margin-left: -4vw;
+    color: gray;
+}
+
+.mensagemUsuarioLogado {
+    list-style: none;
+    width: auto;
+    max-width: 80%;
+    padding: 10px;
+    margin-left: 10px;
+    align-self: flex-end;
+}
+
+.textoMensagemUsuarioLogado {
+    font-size: 16px;
+    color: black;
+    margin: 0px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 5px 10px rgb(219, 0, 219);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.5vw;
+    color: black;
+    margin: 0px;
+    margin-right: 3vw;
+}
+
+.iconeMensagemUsuarioLogado {
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: white;
+    border-radius: 100px;
+    position: relative;
+    margin-top: 7px;
+    margin-top: -1vw;
+    display: flex;
+    justify-self: self-end;
+}
+
+.dataMensagemUsuarioLogado {
+    position: relative;
+    font-size: 1vw;
+    color: gray;
+    margin-left: 1.5vw;
+}
+
+#escreverMensagem {
+    bottom: 0px;
+    width: 66vw;
+    height: 6vw;
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0), rgba(138, 137, 137, 0.863), rgba(255, 0, 255, 0.89));
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+#escreverMensagem textarea {
+    width: 80%;
+    height: 30px;
+    border-radius: 100px;
+    box-shadow: 5px 3px 10px black;
+    border: 2px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    user-select: none;
+    size-adjust: none;
+}
+
+#escreverMensagem button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+#escreverMensagem button:hover {
+    color: whitesmoke;
+    background-color: rgb(247, 25, 173);
 }
