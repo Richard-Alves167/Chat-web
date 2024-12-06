@@ -57,12 +57,12 @@
                     </div>
                     <img src="./imagens/MoChatOn.png" alt="">
                 </div>
+                <div id="escreverMensagem">
+                    <input type="text" id="mensagemEscrita"></input>
+                    <button onclick="criarMensagem()">&gt;</button>
+                </div>
                 <ul id="listaMensagens">
                     <li id="novaConversa">Nova Conversa</li>
-                    <div id="escreverMensagem">
-                        <textarea></textarea>
-                        <button>&gt;</button>
-                    </div>
                     <li class="mensagem">
                         <img src="./imagens/iconUsuarioPreto.png" class="iconeMensagem" alt="">
                         <p class="textoMensagem">Bem vindo</p>
@@ -108,5 +108,7 @@
                 <source src="./videos/fundoCadastrarUsuario.mp4" type="video/mp4">
             </video>
         </div>
+
+        <script src="javascript/chat.js"></script>
     </body>
 </html>
