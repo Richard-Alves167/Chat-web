@@ -16,15 +16,15 @@
                 </div>
                 <div id="secaoLoginInputs">
                     <div class="divInputLogin">
-                        <label>Username:</label>
-                        <input type="text" name="" id="nomeLogin" placeholder="Username">
+                        <label for="nomeLogin">Username:</label>
+                        <input type="text" id="nomeLogin" placeholder="Username">
                     </div>
                     <div class="divInputLogin">
-                        <label>Password:</label>
-                        <input type="password" name="" id="senhaLogin" placeholder="Password">
+                        <label for="senhaLogin">Password:</label>
+                        <input type="password" id="senhaLogin" placeholder="Password">
                     </div>
                 </div>
-                <a href="paginaPerfil.html"><button id="botaoLogar">Entrar</button></a>
+                <button id="botaoLogar" onclick="logarUsuario()">Entrar</button>
                 <div>
                     <p>Não é cadastrado no nosso site ainda?</p>
 
@@ -40,5 +40,6 @@
                 <source src="videos/fundoLogin.mp4" type="video/mp4">
             </video>
         </div>
+        <script src="javascript/logarUsuario.js"></script>
     </body>
 </html>
