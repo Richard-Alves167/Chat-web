@@ -170,7 +170,7 @@ section {
     color: red;
     font-size: 12px;
     position: absolute;
-    margin-top: 60px;
+    margin-top: 4.5vw;
     display: none;
 }
 
@@ -230,4 +230,3 @@ hr {
     text-decoration: underline;
     display: block;
 }
-
