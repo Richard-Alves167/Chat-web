@@ -23,11 +23,21 @@ const chatMensagens = document.getElementById("listaMensagens")
 const mensagemInput = document.getElementById("mensagemEscrita")
 chatMensagens.style.paddingBottom = "5vw"
 
+class Mensagem {
+    constructor(identificacao, dataEnvio, mensagem) {
+      this.id = identificacao;
+      this.data = dataEnvio;
+      this.texto = mensagem;
+    }
+}
+
+
+
 function criarMensagem() {
     if (mensagemInput.value != "") {
-    let novoUsuario = new Usuario("Richard","https://preview.redd.it/zqb5gkxwnbib1.jpg?auto=webp&s=c8bd1e8b2c841bfa6f193008432f0793ad4da899", (new Date).toDateString(), mensagemInput.value)
+    let novaMensagem = new Mensagem(usuarioLogado[0].id, (new Date).toDateString(), mensagemInput.value)
 
-    arrayMensagensArmazenamento.push(novoUsuario)
+    arrayMensagensArmazenamento.push(novaMensagem)
     localStorage.setItem("mensagensLocal",JSON.stringify(arrayMensagensArmazenamento))
     mensagemInput.value = ""
     renderizarMensagens()
@@ -41,24 +51,29 @@ function renderizarMensagens() {
     chatMensagens.innerHTML = `
     <li id="novaConversa">Nova Conversa</li>
     `
-
     arrayMensagensArmazenamento.forEach((object)=> {
-        if (object.nome == usuarioLogado.nome) {
+        if (object.id == usuarioLogado[0].id) {
+            const usuarioLogadoMensagem = arrayArmazenamentoUsuario.filter((usuario => {
+                return usuario.id == usuarioLogado[0].id
+            }))
         let mensagemUsuarioLogado = document.createElement("li")
         mensagemUsuarioLogado.classList.add("mensagemUsuarioLogado")
         mensagemUsuarioLogado.innerHTML = `
         <p class="textoMensagemUsuarioLogado">${object.texto}</p>
         <span class="dataMensagemUsuarioLogado">${object.data}</span>
-        <img src="${object.icone}" class="iconeMensagemUsuarioLogado">
+        <img src="${usuarioLogadoMensagem[0].imagem}" class="iconeMensagemUsuarioLogado">
         `
         chatMensagens.appendChild(mensagemUsuarioLogado)
         } else {
+            const usuarioMensagem = arrayArmazenamentoUsuario.filter((usuario => {
+                return usuario.id == object.id
+            }))
         let mensagem = document.createElement("li")
         mensagem.classList.add("mensagem")
         mensagem.innerHTML = `
-        <img src="${object.icone}" class="iconeMensagem">
+        <img src="${usuarioMensagem[0].imagem}" class="iconeMensagem">
         <p class="textoMensagem">${object.texto}</p>
-        <p class="nomeMensagem">${object.nome}</p>
+        <p class="nomeMensagem">${usuarioMensagem[0].nome}</p>
         <span class="dataMensagem">${object.data}</span>
         `
         chatMensagens.appendChild(mensagem)
@@ -72,11 +87,30 @@ mensagemInput.addEventListener("keydown", (tecla) => {
         criarMensagem()
     }
 })
-
 renderizarMensagens()
 
+const perfilUsuarioChat = document.getElementById("perfilConversa")
+const listaConversas = document.getElementById("listaConversas")
 function renderizarConversas() {
-    
-}
+    perfilUsuarioChat.innerHTML = `
+    <img src="${usuarioLogado[0].imagem}"><p>${usuarioLogado[0].nome}</p>
+    <span id="voltarPerfil" onclick="irParaPerfil()">Voltar ao perfil</span>
+    `
 
+    arrayArmazenamentoUsuario.forEach((usuario) => {
+        if(usuario.id != usuarioLogado[0].id) {
+        let conversa = document.createElement("li")
+        conversa.classList.add("conversa")
+        conversa.innerHTML = `
+        <img src="${usuario.imagem}"><p>${usuario.nome}</p>
+        `
+        listaConversas.appendChild(conversa)
+        }
+    })
+}
+renderizarConversas()
+
+function irParaPerfil() {
+    window.location = `paginaPerfil.html?id=${identificadorUsuarioLogado}`
+}
 //const searchParams = new URLSearchParams(window.location.search)
