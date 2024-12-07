@@ -1,11 +1,16 @@
-class Usuario {
-    constructor (nome,imagem, data, mensagem){
-        this.nome = nome;
-        this.icone = imagem;
-        this.data = data;
-        this.texto = mensagem;
-    }
+let armazenamentoUsuario = localStorage.getItem("usuariosCadastradosLocal")
+let arrayArmazenamentoUsuario = []
+
+if (armazenamentoUsuario != null) {
+    arrayArmazenamentoUsuario = JSON.parse(armazenamentoUsuario)
 }
+
+const URLparametros = new URLSearchParams(window.location.search);
+const identificadorUsuarioLogado = URLparametros.get("id")
+
+const usuarioLogado = arrayArmazenamentoUsuario.filter((usuario) => {
+    return usuario.id == identificadorUsuarioLogado
+})
 
 let arrayMensagensArmazenamento = []
 let armazenamentoMensagens = localStorage.getItem("mensagensLocal")
@@ -38,7 +43,7 @@ function renderizarMensagens() {
     `
 
     arrayMensagensArmazenamento.forEach((object)=> {
-        if (object.nome == "Richard") {
+        if (object.nome == usuarioLogado.nome) {
         let mensagemUsuarioLogado = document.createElement("li")
         mensagemUsuarioLogado.classList.add("mensagemUsuarioLogado")
         mensagemUsuarioLogado.innerHTML = `
@@ -69,5 +74,9 @@ mensagemInput.addEventListener("keydown", (tecla) => {
 })
 
 renderizarMensagens()
+
+function renderizarConversas() {
+    
+}
 
 //const searchParams = new URLSearchParams(window.location.search)

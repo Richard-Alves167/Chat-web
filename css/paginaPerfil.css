@@ -122,6 +122,7 @@ section {
     border-bottom-left-radius: 90px;
     padding-left: 30px;
     padding: 10px;
+    font-family: titulo;
 }
 
 
@@ -178,6 +179,11 @@ hr {
     align-items: center;
     font-size: 20px;
     font-weight: bold;
+}
+
+#paragrafoOla {
+    color: #bfbfbf;
+    font-size: 2vw;
 }
 
 #sairConta {
@@ -254,10 +260,9 @@ hr {
     background-color: #484848;
     border-radius: 10px;
     position: relative;
-    margin-left: -0.75vw;
+    margin-left: 0.5vw;
     padding: 5px;
-    display: none;
-    margin-top: 2.5vw;
+    margin-top: 2vw;
 }
 
 #divMudarIcone button {
@@ -277,10 +282,6 @@ hr {
     border-bottom-left-radius: 10px;
     text-align-last: left;
     padding-left: 10px;
-}
-
-#icone:hover #divMudarIcone{
-    display: flex;
 }
 
 #nomeUsuario {
@@ -417,6 +418,7 @@ hr {
     gap: 25px;
     padding-left: 0px;
     margin: 0px;
+    overflow-x: auto;
 }
 
 .mensagem {
@@ -440,6 +442,8 @@ hr {
     width: 30px;
     margin-top: 5px;
     margin-left: 8.2vw;
+    border-radius: 100px;
+    border: 1px white solid;
     position: fixed;
 }
 
@@ -470,6 +474,8 @@ hr {
     position: fixed;
     margin-top: 7px;
     margin-left: -28px;
+    border-radius: 100px;
+    border: 1px white solid;
 }
 
 .dataMensagemOutroUsuario {
@@ -477,4 +483,12 @@ hr {
     font-size: 13px;
     margin-top: 10px;
     margin-left: 6vw;
+}
+
+.desaparecer {
+    display: none;
+}
+
+.aparecer {
+    display: flex;
 }
