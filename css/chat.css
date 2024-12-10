@@ -1,6 +1,6 @@
 @font-face {
     font-family: texto;
-    src: url(../fontes/Excalibur\ Nouveau.ttf);
+    src: url(../fontes/BebasNeue-Regular.ttf);
 }
 
 @font-face {
@@ -90,59 +90,32 @@ section {
 
 
 #perfilConversa img{
-    width: 70px;
-    height: 70px;
+    width: 5vw;
+    height: 5vw;
     margin-left: 30px;
     border-radius: 100px;
     border: 2px solid purple;
 }
+
+#contaLogadaTopoConversa {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 30px;
+    border-radius: 100px;
+    border: 2px solid purple;
+    align-content: center;
+    text-align: center;
+    font-size: 3vw;
+} 
 
 #voltarPerfil {
     position: absolute;
     color: rgb(43, 46, 226);
-    margin-top: 8vw;
-    margin-left: 2vw;
+    margin-top: 5vw;
+    margin-left: 15vw;
     font-size: 1vw;
     cursor: pointer;
     user-select: none;
-}
-
-.conversa {
-    border-top: 2px solid purple;
-    background-image: linear-gradient(to right,rgb(196, 196, 196),rgb(96, 65, 100));
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    cursor: pointer;
-}
-
-.conversa:hover {
-    border: white;
-    color: aliceblue;
-    background-image: linear-gradient(to right, rgb(77, 0, 87), rgb(196, 196, 196));
-}
-
-.conversa img {
-    width: 70px;
-    height: 70px;
-    margin-left: 30px;
-    border-radius: 100px;
-    border: 2px solid purple;
-}
-
-.conversa:hover img {
- border: 2px solid aliceblue;;
-}
-
-.conversa p {
-    font-size: 30px;
-}
-
-#chatConversa {
-    height: 100%;
-    width: 75%;
 }
 
 #topoConversa {
@@ -191,6 +164,59 @@ section {
     border-radius: 100px;
 }
 
+.conversa {
+    border-top: 2px solid purple;
+    background-image: linear-gradient(to right,rgb(140, 140, 140),rgb(96, 65, 100));
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.conversa:hover {
+    border: white;
+    color: aliceblue;
+    background-image: linear-gradient(to right, rgb(77, 0, 87), rgb(196, 196, 196));
+}
+
+.conversa img {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 30px;
+    border-radius: 100px;
+    border: 2px solid purple;
+}
+
+.conversa:hover img {
+ border: 2px solid aliceblue;;
+}
+
+.conversa span {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 30px;
+    border-radius: 100px;
+    border: 2px solid purple;
+    align-content: center;
+    text-align: -webkit-center;
+    font-size: 3vw;
+}
+
+.conversa:hover span {
+    border: 2px solid aliceblue;;
+}
+
+.conversa p {
+    font-size: 1.5vw;
+}
+
+#chatConversa {
+    height: 100%;
+    width: 75%;
+}
+
 #listaMensagens {
     width: 100%;
     height: 70%;
@@ -224,14 +250,29 @@ section {
 }
 
 .iconeMensagem {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 4vw;
+    height: 4vw;
     background-color: white;
     border-radius: 100px;
     margin-top: 5px;
     margin-left: -3.5vw;
     margin-bottom: -2vw;
     position: relative;
+    border: #f4f4f4 2px solid;
+}
+
+.iconeMensagemLetra {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 100px;
+    margin-top: 5px;
+    margin-left: -3.5vw;
+    margin-bottom: -2vw;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    font-size: 3vw;
+    border: #f4f4f4 2px solid;
 }
 
 .nomeMensagem {
@@ -286,6 +327,23 @@ section {
     margin-top: -1vw;
     display: flex;
     justify-self: self-end;
+    border: #f4f4f4 2px solid;
+}
+
+.iconeLetraMensagemUsuarioLogado {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: white;
+    border-radius: 100px;
+    position: relative;
+    margin-top: 7px;
+    margin-top: -1vw;
+    display: flex;
+    justify-self: self-end;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border: #f4f4f4 2px solid;
 }
 
 .dataMensagemUsuarioLogado {

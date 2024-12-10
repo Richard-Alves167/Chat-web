@@ -2,14 +2,14 @@ let usuarios = []
 // let logarUsuarioAoLocalStorage = []
 // let usuarioLogadoSite = []
 
-let Admin = {
-    nome: "Zoe Admin",
-    senha: 2018,
-    imagem: "https://i.pinimg.com/736x/b2/51/1d/b2511d14b09210441c2fc4ea5e4eace0.jpg",
-    telefone: "/-------/",
-    endereco: "/-------/",
-    email: "/-------/",
-}
+// let Admin = {
+//     nome: "Zoe Admin",
+//     senha: 2018,
+//     imagem: "https://i.pinimg.com/736x/b2/51/1d/b2511d14b09210441c2fc4ea5e4eace0.jpg",
+//     telefone: "/-------/",
+//     endereco: "/-------/",
+//     email: "/-------/",
+// }
 
 const armazenamentoUsuarios = localStorage.getItem("usuariosCadastradosLocal")
 

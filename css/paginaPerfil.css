@@ -1,6 +1,6 @@
 @font-face {
     font-family: texto;
-    src: url(../fontes/Excalibur\ Nouveau.ttf);
+    src: url(../fontes/BebasNeue-Regular.ttf);
 }
 
 @font-face {
@@ -208,10 +208,21 @@ hr {
     cursor: pointer;
 }
 
+#imagemLetra {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 5vw;
+    user-select: none;
+}
+
 #cameraIcone {
     display: none;
     position: absolute;
-    margin-top: -7vw;
+    margin-top: -6.5vw;
     margin-left: 0.5vw;
     cursor: pointer;
     width: 6vw;

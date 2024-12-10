@@ -8,11 +8,13 @@ if (armazenamentouUsuarios !== null) {
 
 function cadastrarUsuario() {
     class Usuario {
-        constructor(nome, email, senha, identificacao) {
+        constructor(nome, email, senha, letra, identificacao) {
           this.nome = nome;
           this.email = email;
           this.senha = senha;
-          this.imagem = "/imagens/iconUsuarioPreto.png"
+          this.imagem = "";
+          this.letraInicial = letra;
+          this.corDeFundo = `rgb(${(Math.random() * (250 - 180) + 180).toFixed(0)},${(Math.random() * (250 - 180) + 180).toFixed(0)},${(Math.random() * (250 - 180) + 180).toFixed(0)})`
           this.id = identificacao;
         }
     }
@@ -23,7 +25,7 @@ function cadastrarUsuario() {
 
     if (nomeUsuario.value != "" && emailUsuario.value != "" && senhaUsuario.value != "") {
 
-    const usuario = new Usuario(nomeUsuario.value, emailUsuario.value, senhaUsuario.value, usuarios.length)
+    const usuario = new Usuario(nomeUsuario.value, emailUsuario.value, senhaUsuario.value, nomeUsuario.value[0], usuarios.length)
 
     usuarios.push(usuario)
 
