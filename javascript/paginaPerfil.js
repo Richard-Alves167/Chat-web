@@ -80,7 +80,7 @@ function temImagem() {
             if (iconeLetra) {
                 iconeId.removeChild(iconeLetra)
             }
-            }
+        }
         icone = document.getElementById("imagemUsuario")
         iconeUsuario = document.getElementById("imagemUsuario")
         iconeMiniChat.setAttribute("src",usuarioLogado[0].imagem)
