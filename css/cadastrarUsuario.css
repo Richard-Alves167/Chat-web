@@ -213,6 +213,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: 2px 10px 20px rgb(82, 82, 82);
+    cursor: pointer;
 }
 
 #button:hover {

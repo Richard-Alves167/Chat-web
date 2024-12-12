@@ -33,10 +33,6 @@ if (identificadorConversa != "grupo" && identificadorConversa != null ) {
     }
 }
 
-const chatMensagens = document.getElementById("listaMensagens")
-const mensagemInput = document.getElementById("mensagemEscrita")
-chatMensagens.style.paddingBottom = "5vw"
-
 function renderizarTelaConversa() {
     const topoConversa = document.getElementById("topoConversa")
     let div = document.createElement("div")
@@ -59,6 +55,7 @@ function renderizarTelaConversa() {
             div.innerHTML = `
             <span id="contaLogadaTopoConversa" style="background-color: ${usuarioConversa[0].corDeFundo}">${usuarioConversa[0].letraInicial}</span>
             <p id="nomeConversa">${usuarioConversa[0].nome}</p>
+            <p id="usuarioDigitando">Digitando...</p>
             `
         }
         topoConversa.appendChild(div)
@@ -67,6 +64,7 @@ function renderizarTelaConversa() {
         div.innerHTML = `
         <img src="https://w7.pngwing.com/pngs/987/288/png-transparent-league-of-legends-defense-of-the-ancients-computer-icons-league-of-legends-purple-text-video-game.png" alt="">
         <p id="nomeConversa">Os Lolzeiros</p>
+        <p id="usuarioDigitando">Alguém está digitando...</p>
         `
         topoConversa.appendChild(div)
         topoConversa.appendChild(imagemIconeSite)
@@ -81,6 +79,10 @@ class Mensagem {
       this.texto = mensagem;
     }
 }
+
+const chatMensagens = document.getElementById("listaMensagens")
+const mensagemInput = document.getElementById("mensagemEscrita")
+chatMensagens.style.paddingBottom = "5vw"
 
 function criarMensagem() {
     if (mensagemInput.value != "") {
@@ -239,11 +241,39 @@ function renderizarMensagens() {
     }
 }
 
+const mensagemDigitando = document.getElementById("usuarioDigitando")
+
 mensagemInput.addEventListener("keydown", (tecla) => {
     if (tecla.key == "Enter") {
         criarMensagem()
+        localStorage.removeItem(`digitandoUser-${usuarioLogado.id}`)
     }
 })
+
+function digitandoUsuario() {
+    localStorage.setItem(`digitandoUser-${usuarioLogado[0].id}`,mensagemInput.value)
+}
+
+mensagemInput.addEventListener("keydown", digitandoUsuario)
+
+window.addEventListener("storage",() => {
+    const usuarioDigitanto = localStorage.getItem(`digitandoUser-${identificadorConversa[2]}`)
+
+    // if (identificadorConversa == "grupo") {
+    //     if (mensagemInput.value == "") {
+    //         mensagemDigitando.style.display = "flex"
+    //     } else {
+    //         mensagemDigitando.style.display = "none"
+    //     }
+    // } else {
+        if (usuarioDigitanto) {
+            mensagemDigitando.style.display = "flex"
+        } else {
+            mensagemDigitando.style.display = "none"
+        }
+    // }
+})
+
 renderizarMensagens()
 
 function renderizarConversas() {
@@ -298,8 +328,6 @@ function irParaPerfil() {
 window.addEventListener("storage",renderizarMensagens)
 //const searchParams = new URLSearchParams(window.location.search)
 
-console.log(usuarioLogado[0].nome[0].toLowerCase())
-
 const imagemPrincipal = document.getElementById("divPrincipal")
 const inputMensagem = document.getElementById("escreverMensagem")
 const novaConversa = document.getElementById("novaConversa")
@@ -310,4 +338,3 @@ if (identificadorConversa) {
     inputMensagem.style.display = "none"
     novaConversa.style.display = "none"
 }
-

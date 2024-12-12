@@ -119,4 +119,5 @@ section {
     color: aliceblue;
     font-family: texto;
     font-size: 20px;
+    cursor: pointer;
 }

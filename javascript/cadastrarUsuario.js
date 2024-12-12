@@ -55,7 +55,7 @@ function cadastrarUsuario() {
             const emailSpan = document.getElementById("preencherCampoCadastroEmail")
             emailSpan.style.display = "block"
             emailUsuario.style.border = "1px red solid"
-            emailSpan.textContent = "Todos os campos devem ser preenchidos."
+            emailSpan.textContent = "*Todos os campos devem ser preenchidos."
             emailUsuario.style.backgroundImage = "linear-gradient(to right, rgb(204, 204, 204), rgb(240, 57, 124),rgb(255, 41, 41))"
         } else if (!(emailUsuario.value).includes("@")) {
             const emailSpan = document.getElementById("preencherCampoCadastroEmail")
@@ -85,33 +85,3 @@ function cadastrarUsuario() {
         }
     }
 }
-
-// const tabela = document.getElementById("tabelaUsuarioesCadastrados")
-
-// function renderizarTabela() {
-//         tabela.innerHTML = ""
-
-//         usuarios.forEach(object => {
-//             let novotr = document.createElement("tr")
-
-//             novotr.innerHTML =`
-//             <td><button class="tabelaBotao" onclick="removerProduto(${usuarios.indexOf(object)})">X</button></td>
-//             <td><img class="iconeUsuario" src="${object.imagem}"></td>
-//             <td>${object.nome}</td>
-//             <td>${object.email}</td>
-//             <td>${object.telefone}</td>
-//             <td>${object.endereco}</td>
-//             `
-//             tabela.appendChild(novotr)
-//         }); 
-// }
-
-// function removerProduto(index) {
-//     usuarios.splice(index,1)
-
-//     localStorage.setItem("usuarioLocal", JSON.stringify(usuarios))
-
-//     renderizarTabela()
-// }
-
-// renderizarTabela()

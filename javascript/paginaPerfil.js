@@ -57,6 +57,14 @@ function renderizarPerfil() {
     temImagem()
 }
 
+function sairConta() {
+    window.location = `inicio_logarUsuario.html`
+}
+
+// function removerConta(identificador) {
+    
+// }
+
 function irParaChat() {
     window.location = `chat.html?id=${identificadorUsuarioLogado}`
 }

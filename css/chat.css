@@ -8,6 +8,14 @@
     src: url(../fontes/Rothwell.otf);
 }
 
+.desaparecer {
+    display: none;
+}
+
+.aparecer {
+    display: flex;
+}
+
 html {
     margin: 0px;
     padding: 0px;
@@ -182,9 +190,18 @@ section {
     border: #f4f4f4 2px solid;
 }
 
-#topoConversa p {
+#nomeConversa {
     font-size: 4vw;
     color: aliceblue;
+}
+
+#usuarioDigitando {
+    font-size: 1.5vw;
+    margin-bottom: -4vw;
+    margin-left: 10vw;
+    color: gray;
+    position: absolute;
+    display: none;
 }
 
 #novaConversa {
