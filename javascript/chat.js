@@ -17,7 +17,12 @@ console.log(identificadorConversa)
 
 let arrayMensagensArmazenamento = []
 if (identificadorConversa != "grupo" && identificadorConversa != null ) {
-    let armazenamentoMensagens = localStorage.getItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}`) || localStorage.getItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`)    
+    let armazenamentoMensagens = null
+    if (localStorage.getItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}`)) {
+        armazenamentoMensagens = localStorage.getItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}`)
+    } else if (localStorage.getItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`)){
+        armazenamentoMensagens = localStorage.getItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`)
+    }
     if (armazenamentoMensagens != null) {
         arrayMensagensArmazenamento = JSON.parse(armazenamentoMensagens)
     }
@@ -45,10 +50,17 @@ function renderizarTelaConversa() {
         })
         console.log(usuarioConversa)
         console.log(identificadorDaConversaUsuarioPrivado)
-        div.innerHTML = `
-        <img src="${usuarioConversa[0].imagem}">
-        <p id="nomeConversa">${usuarioConversa[0].nome}</p>
-        `
+        if (usuarioConversa[0].imagem) {
+            div.innerHTML = `
+            <img src="${usuarioConversa[0].imagem}">
+            <p id="nomeConversa">${usuarioConversa[0].nome}</p>
+            `
+        } else {
+            div.innerHTML = `
+            <span id="contaLogadaTopoConversa" style="background-color: ${usuarioConversa[0].corDeFundo}">${usuarioConversa[0].letraInicial}</span>
+            <p id="nomeConversa">${usuarioConversa[0].nome}</p>
+            `
+        }
         topoConversa.appendChild(div)
         topoConversa.appendChild(imagemIconeSite)
     } else if (identificadorConversa == "grupo") {
@@ -76,6 +88,11 @@ function criarMensagem() {
 
     arrayMensagensArmazenamento.push(novaMensagem)
     if (identificadorConversa != "grupo" && identificadorConversa != null) {  
+        if (localStorage.getItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`)){
+            localStorage.setItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`,JSON.stringify(arrayMensagensArmazenamento))
+        } else {
+            localStorage.setItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}`,JSON.stringify(arrayMensagensArmazenamento))
+        }
         localStorage.setItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}` || `conversa${identificadorConversa[2]}e${identificadorConversa[0]}`,JSON.stringify(arrayMensagensArmazenamento))
     } else if (identificadorConversa == "grupo") {
         localStorage.setItem("mensagensLocal",JSON.stringify(arrayMensagensArmazenamento))
@@ -88,7 +105,12 @@ function criarMensagem() {
 
 function renderizarMensagens() {
     if (identificadorConversa != "grupo" && identificadorConversa != null) {
-        armazenamentoMensagens = localStorage.getItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}` || `conversa${identificadorConversa[2]}e${identificadorConversa[0]}`,JSON.stringify(arrayMensagensArmazenamento))
+        armazenamentoMensagens = null
+        if (localStorage.getItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}`)) {
+            armazenamentoMensagens = localStorage.getItem(`conversa${identificadorConversa[0]}e${identificadorConversa[2]}`)
+        } else if (localStorage.getItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`)){
+            armazenamentoMensagens = localStorage.getItem(`conversa${identificadorConversa[2]}e${identificadorConversa[0]}`)
+        }
         arrayArmazenamentoUsuario = JSON.parse(localStorage.getItem("usuariosCadastradosLocal"))
 
         if (armazenamentoMensagens != null) {

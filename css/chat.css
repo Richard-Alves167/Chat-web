@@ -171,7 +171,15 @@ section {
 #topoConversa img{
     width: 5vw;
     height: 5vw;
-    border-radius: 10px;
+    border-radius: 100px;
+    border: #f4f4f4 2px solid;
+}
+
+#topoConversa span {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100px;
+    border: #f4f4f4 2px solid;
 }
 
 #topoConversa p {
@@ -288,6 +296,7 @@ section {
     width: fit-content;
     color: black;
     margin: 0px;
+    margin-left: 0.5vw;
 }
 
 .iconeMensagem {
@@ -319,7 +328,7 @@ section {
 .nomeMensagem {
     margin: 0px;
     margin-top: -1.2vw;
-    margin-left: -4vw;
+    margin-left: -3vw;
     font-size: 1vw;
     color: blueviolet;
 }
@@ -331,7 +340,7 @@ section {
     justify-self: end;
     align-self: self-end;
     margin-bottom: -1.5vw;
-    margin-left: -4vw;
+    margin-left: -1vw;
     color: gray;
 }
 
