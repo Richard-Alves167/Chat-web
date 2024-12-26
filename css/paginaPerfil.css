@@ -1,6 +1,6 @@
 @font-face {
     font-family: texto;
-    src: url(../fontes/BebasNeue-Regular.ttf);
+    src: url(../fontes/Renner_\ 400\ Book.ttf);
 }
 
 @font-face {
@@ -316,7 +316,7 @@ hr {
 
 #informacoesUsuario {
     width: 100%;
-    gap: 10px;
+    gap: 1.7vw;
     display: flex;
     flex-direction: column;
 }
@@ -368,8 +368,8 @@ hr {
 }
 
 #irParaChat {
-    width: 280px;
-    height: 20vw;
+    width: 13vw;
+    height: 22vw;
     margin-top: 24px;
     margin-left: 20px;
     background-color: aliceblue;
@@ -401,7 +401,6 @@ hr {
 
 #miniChatPerfil {
     height: 70%;
-    width: 94%;
     background-color: #484848;
     border-radius: 10px;
     padding: 10px;
@@ -438,21 +437,21 @@ hr {
     list-style: none;
     width: auto;
     max-width: 80%;
-    padding: 6px;
+    padding: 8px;
     margin-left: 26%;
     margin-right: 10px;
 }
 
 .textoMensagem {
-    font-size: 1vw;
+    font-size: 0.7vw;
     color: black;
     margin: 0px;
 }
 
 .iconeMensagem {
-    width: 30px;
+    width: 25px;
     margin-top: 5px;
-    margin-left: 8.2vw;
+    margin-left: 6.5vw;
     border-radius: 100px;
     border: 1px white solid;
     position: fixed;
@@ -470,7 +469,7 @@ hr {
     list-style: none;
     width: auto;
     max-width: 80%;
-    padding: 10px;
+    padding: 8px;
     margin-left: 10px;
 }
 
@@ -482,9 +481,10 @@ hr {
 
 .iconeMensagemOutroUsuario {
     width: 30px;
+    height: 30px;
     position: fixed;
     margin-top: 7px;
-    margin-left: -28px;
+    margin-left: -1.6vw;
     border-radius: 100px;
     border: 1px white solid;
 }

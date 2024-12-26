@@ -1,23 +1,26 @@
 let usuarios = []
 
+class Usuario {
+    constructor(nome, email, senha, letra, identificacao) {
+      this.nome = nome;
+      this.email = email;
+      this.senha = senha;
+      this.imagem = "";
+      this.letraInicial = letra;
+      this.corDeFundo = `rgb(${(Math.random() * (250 - 180) + 180).toFixed(0)},${(Math.random() * (250 - 180) + 180).toFixed(0)},${(Math.random() * (250 - 180) + 180).toFixed(0)})`
+      this.id = identificacao;
+    }
+}
+
 const armazenamentouUsuarios = localStorage.getItem("usuariosCadastradosLocal")
 
-if (armazenamentouUsuarios !== null) {
+if (armazenamentouUsuarios == null) {
+
+} else {
     usuarios = JSON.parse(armazenamentouUsuarios)
 }
 
 function cadastrarUsuario() {
-    class Usuario {
-        constructor(nome, email, senha, letra, identificacao) {
-          this.nome = nome;
-          this.email = email;
-          this.senha = senha;
-          this.imagem = "";
-          this.letraInicial = letra;
-          this.corDeFundo = `rgb(${(Math.random() * (250 - 180) + 180).toFixed(0)},${(Math.random() * (250 - 180) + 180).toFixed(0)},${(Math.random() * (250 - 180) + 180).toFixed(0)})`
-          this.id = identificacao;
-        }
-    }
 
     const nomeUsuario = document.getElementById("nomeUsuario")
     const emailUsuario = document.getElementById("emailUsuario")

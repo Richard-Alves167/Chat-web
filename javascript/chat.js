@@ -62,8 +62,8 @@ function renderizarTelaConversa() {
         topoConversa.appendChild(imagemIconeSite)
     } else if (identificadorConversa == "grupo") {
         div.innerHTML = `
-        <img src="https://w7.pngwing.com/pngs/987/288/png-transparent-league-of-legends-defense-of-the-ancients-computer-icons-league-of-legends-purple-text-video-game.png" alt="">
-        <p id="nomeConversa">Os Lolzeiros</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/7607/7607629.png" alt="">
+        <p id="nomeConversa">Group MoChatOn</p>
         <p id="usuarioDigitando">Alguém está digitando...</p>
         `
         topoConversa.appendChild(div)

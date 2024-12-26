@@ -1,6 +1,6 @@
 @font-face {
     font-family: texto;
-    src: url(../fontes/BebasNeue-Regular.ttf);
+    src: url(../fontes/Renner_\ 400\ Book.ttf);
 }
 
 @font-face {
@@ -87,6 +87,7 @@ section {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 #listaConversas {
@@ -196,9 +197,9 @@ section {
 }
 
 #usuarioDigitando {
-    font-size: 1.5vw;
-    margin-bottom: -4vw;
-    margin-left: 10vw;
+    font-size: 2.5vw;
+    margin-bottom: -6vw;
+    margin-left: -19vw;
     color: gray;
     position: absolute;
     display: none;
@@ -352,12 +353,11 @@ section {
 
 .dataMensagem {
     font-size: 1vw;
-    margin-left: 1vw;
     display: flex;
     justify-self: end;
     align-self: self-end;
     margin-bottom: -1.5vw;
-    margin-left: -1vw;
+    margin-left: -3vw;
     color: gray;
 }
 
@@ -417,12 +417,12 @@ section {
     position: relative;
     font-size: 1vw;
     color: gray;
-    margin-left: 1.5vw;
+    margin-left: -3.5vw;
 }
 
 #escreverMensagem {
     bottom: 0px;
-    width: 66vw;
+    width: 67vw;
     height: 6vw;
     background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0), rgba(138, 137, 137, 0.863), rgba(255, 0, 255, 0.89));
     z-index: 2;
@@ -459,4 +459,27 @@ section {
 #escreverMensagem button:hover {
     color: whitesmoke;
     background-color: rgb(247, 25, 173);
+}
+
+@media (max-width: 900px) {
+    #videoFundo video {
+        height: 200%;
+        width: 400%;
+        position: absolute;
+        rotate: 90deg;
+        left: -100vw;
+    }
+
+    #topoConversa img{
+        width: 8vw;
+        height: 8vw;
+        border-radius: 100px;
+        border: #f4f4f4 2px solid;
+    }
+
+    #divPrincipal img {
+        width: 16vw;
+        height: 16vw;
+        margin-top: 35vw;
+    }
 }
